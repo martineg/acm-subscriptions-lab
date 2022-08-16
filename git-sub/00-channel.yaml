@@ -1,0 +1,10 @@
+apiVersion: apps.open-cluster-management.io/v1
+kind: Channel
+metadata:
+  name: ch-lab-git
+  namespace: acm-channels
+  annotations:
+    apps.open-cluster-management.io/reconcile-rate: high
+spec:
+  pathname: 'https://github.com/martineg/acm-subscriptions-lab.git'
+  type: Git

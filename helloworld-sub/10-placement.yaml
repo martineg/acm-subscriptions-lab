@@ -1,0 +1,11 @@
+apiVersion: apps.open-cluster-management.io/v1
+kind: PlacementRule
+metadata:
+  labels:
+    app: helloworld
+  name: helloworld-placement-1
+  namespace: acm-lab
+spec:
+  clusterSelector:
+    matchLabels:
+      environment: demo
