@@ -3,8 +3,8 @@ kind: Subscription
 metadata:
   annotations:
     apps.open-cluster-management.io/github-branch: multiple-charts
-    apps.open-cluster-management.io/github-path: git-sub
-  name: local-git-artifacts-sub
+    apps.open-cluster-management.io/github-path: mortgage-sub
+  name: mortgage-repo-sub
   namespace: acm-lab
 spec:
   channel: acm-channels/ch-lab-git

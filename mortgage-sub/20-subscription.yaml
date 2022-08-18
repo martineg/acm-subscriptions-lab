@@ -3,11 +3,15 @@ kind: Subscription
 metadata:
   annotations:
     apps.open-cluster-management.io/github-branch: multiple-charts
-    apps.open-cluster-management.io/github-path: git-sub
-  name: local-git-artifacts-sub
+    apps.open-cluster-management.io/github-path: charts/mortgage-helm
+  name: mortgage-chart-sub
   namespace: acm-lab
+  labels:
+    app: mortgage
 spec:
   channel: acm-channels/ch-lab-git
   type: Git
   placement:
-    local: true
+    placementRef:
+      kind: PlacementRule
+      name: mortgage-placement-1
